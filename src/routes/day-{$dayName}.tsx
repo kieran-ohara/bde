@@ -5,7 +5,7 @@ import { DelayedVideo } from '../components/DelayedVideo'
 export const Route = createFileRoute('/day-{$dayName}')({
   beforeLoad: ({ params }) => {
     if (!isDayName(params.dayName)) {
-      throw redirect({ to: '/day-{$dayName}', params: { dayName: 'one' } })
+      throw redirect({ to: '/intro' })
     }
   },
   component: DayPage,
